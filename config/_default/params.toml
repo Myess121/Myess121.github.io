@@ -19,8 +19,8 @@ SortBy              = "default"
     lastUpdated = "2006-01-02"
 
 [sidebar]
-    emoji    = "🍥"
-    subtitle = "Moonlight, Dream, Yonder.「月光，梦境，皆向远方。」"
+    emoji    = "🌙"  # 头像右下角的小图标，留空 "" 即不显示
+    subtitle = "Moonlight, Dream, Yonder.\n「月光，梦境，皆向远方。」"  # \n 表示换行
     avatar   = "img/avatar.jpg"
 
 [article]

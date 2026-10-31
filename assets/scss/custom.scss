@@ -1,3 +1,8 @@
 /*
     You can add your own custom styles here.
 */
+
+// 侧边栏简介：让 params.toml 里 subtitle 中的 \n 显示为换行
+.site-description {
+    white-space: pre-line;
+}
