@@ -2,6 +2,8 @@
 
 网站地址：<https://Myess121.github.io/>
 
+> **新手请先看 [docs/操作说明书.md](docs/操作说明书.md)**：写文章、插图、公式、发布、改个人信息、排错，一步一步都有。
+
 基于 [Hugo](https://gohugo.io/) + [Hugo Theme Stack v4](https://github.com/CaiJimmy/hugo-theme-stack)，从官方模板 [hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) 创建。全部使用免费服务：GitHub 托管代码，GitHub Actions 自动构建，GitHub Pages 发布网站。没有服务器、没有数据库。
 
 ## 一、网站是怎么运行的
@@ -28,6 +30,7 @@
 | `assets/img/` | 头像 `avatar.jpg`、网站图标 `favicon-avatar.png` |
 | `assets/scss/custom.scss` | 自定义样式（一般不用改） |
 | `layouts/` | 对主题个别模板的覆盖（目前只有去掉 Google Fonts） |
+| `docs/操作说明书.md` | 详细操作说明书（日常写作和发布看这个） |
 | `docs/文章模板.md` | 可复制的文章模板和字段说明 |
 | `docs/更新日志.md` | 每次修改的记录，方便接手 |
 | `docs/验收清单.md` | 第一版的验收检查项 |
