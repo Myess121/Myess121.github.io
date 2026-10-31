@@ -43,7 +43,7 @@ content/
 1. 优先改 `config/_default/` 里的配置。
 2. 样式微调放 `assets/scss/custom.scss`。
 3. 必须改模板时，在本仓库 `layouts/` 下建同路径文件覆盖（Hugo 会优先使用项目里的文件），不要改模块缓存里的主题本体。
-4. 现有覆盖：`layouts/_partials/head/custom-font.html` 置空，去掉 Google Fonts（中国大陆访问问题）。
+4. 现有覆盖：`layouts/_partials/head/custom-font.html` 置空，去掉 Google Fonts（中国大陆访问问题）；`layouts/_partials/head/custom.html` 输出 noindex（站主不希望被搜索引擎收录，不要移除）；`layouts/robots.txt`。`config.toml` 中 `disableKinds = ["sitemap"]`。
 5. 外部资源：KaTeX、PhotoSwipe 由主题从 jsDelivr 加载（`data/external.toml` 在主题中）。如要自托管，在本仓库新建 `data/external.toml` 覆盖。
 6. 保留页脚主题署名、`LICENSE`（Starter，MIT）；主题本身为 GPL-3.0。
 
@@ -54,7 +54,7 @@ content/
 1. `hugo --gc --minify` 构建无 `ERROR`。`WARN deprecated: css.Sass: libsass` 来自主题，可忽略。
 2. 检查 `public/` 中存在：`index.html`、`p/<slug>/index.html`、`categories/`、`tags/`、`archives/`、`search/`、`about/`、`index.xml`（RSS）。
 3. 草稿（`draft: true`）不得出现在 `public/` 中。
-4. 改动涉及公式时，确认页面中包含 KaTeX 脚本。
+4. 公式按文章开启（`params.toml` 中 `article.math = false`，文章 front matter 写 `math: true` 才加载 KaTeX）。改动涉及公式时，确认该页面包含 KaTeX 脚本。
 5. 有条件时运行 `hugo server -D` 在浏览器中检查，包括手机宽度和深色模式。
 
 不要提交 `public/`、`resources/`、`.hugo_build.lock`、密钥或本地配置（见 `.gitignore`）。

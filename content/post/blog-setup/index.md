@@ -4,6 +4,7 @@ description: 【示例内容】记录本博客的搭建过程，同时用来测�
 slug: blog-setup
 date: 2026-10-31
 image: cover.jpg
+math: true
 categories:
     - 学学习
 tags:

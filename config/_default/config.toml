@@ -11,6 +11,10 @@ defaultContentLanguage = "zh"
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage = true
 
+# 站主不希望网站被搜索引擎收录：不生成 sitemap；robots.txt 允许抓取，好让搜索引擎看到页面里的 noindex 标记（见 layouts/_partials/head/custom.html）
+disableKinds = ["sitemap"]
+enableRobotsTXT = true
+
 
 [pagination]
     pagerSize = 5

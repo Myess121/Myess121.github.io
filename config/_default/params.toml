@@ -25,7 +25,7 @@ SortBy              = "default"
 
 [article]
     headingAnchor = false
-    math          = true
+    math          = false  # 公式脚本只在 front matter 写了 math: true 的文章加载
     readingTime   = true
 
     [article.license]

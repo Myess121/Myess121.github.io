@@ -96,7 +96,7 @@ git push
 ## 五、写作要点
 
 - 分类二选一：`学学习`、`碎碎念`。更细的主题（如“线性代数”“Python”）用标签（tags）区分，标签可以随便写。
-- 数学公式已全站开启（KaTeX）：行内 `$...$`，块级 `$$...$$`。
+- 数学公式（KaTeX）只在开头写了 `math: true` 的文章里生效：行内 `$...$`，块级 `$$...$$`。
 - 图片放在文章文件夹里，用 `![说明](文件名.jpg)` 引用；front matter 里写 `image: 文件名.jpg` 设为封面。
 - 示例文章《我的博客搭建记录》在 `content/post/blog-setup/`，可以参考格式，不需要时删掉整个文件夹。
 
@@ -143,7 +143,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 ## 八、关于访问速度
 
-主题字体原本从 Google Fonts 加载，中国大陆通常访问不了，已在 `layouts/_partials/head/custom-font.html` 中关闭，改用系统字体。数学公式（KaTeX）和图片放大功能（PhotoSwipe）仍从 jsDelivr CDN 加载，只在用到的页面加载。GitHub Pages 在国内的访问速度没有经过测试，不作保证；以后如有需要，可以把 KaTeX 改为放在本仓库内自托管。
+主题字体原本从 Google Fonts 加载，中国大陆通常访问不了，已在 `layouts/_partials/head/custom-font.html` 中关闭，改用系统字体。数学公式（KaTeX）和图片放大功能（PhotoSwipe）仍从 jsDelivr CDN 加载，只在用到的页面加载（公式脚本只在 `math: true` 的文章加载）。GitHub Pages 在国内的访问速度没有经过测试，不作保证；以后如有需要，可以把 KaTeX 改为放在本仓库内自托管。
 
 ## 九、主题更新
 
@@ -157,7 +157,11 @@ hugo server -D
 
 预览没问题再提交推送。也可以在 Actions 页面手动运行 “Update theme”，之后在本地 `git pull`。
 
-## 十、许可证
+## 十、不被搜索引擎收录
+
+站主不希望网站被搜索到，所以每个页面都带有 `<meta name="robots" content="noindex, nofollow">`（`layouts/_partials/head/custom.html`），并且不生成 sitemap。`layouts/robots.txt` 允许抓取，是为了让搜索引擎能读到 noindex 标记后不收录。这只是对正规搜索引擎的请求，知道网址的人仍然可以访问。想恢复收录：删除 `custom.html`，去掉 `config.toml` 里的 `disableKinds = ["sitemap"]`。
+
+## 十一、许可证
 
 - 模板代码来自 hugo-theme-stack-starter，见 `LICENSE`（MIT）。
 - 主题 Hugo Theme Stack 采用 GPL-3.0，页脚的“主题 Stack 由 Jimmy 设计”请保留。

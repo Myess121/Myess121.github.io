@@ -10,6 +10,8 @@ categories:
     - 学学习
 tags:
     -
+# 文章里有数学公式时改成 true，否则公式不会渲染
+math: false
 # true 表示草稿：本地 hugo server -D 能看到，正式网站不会发布
 draft: true
 ---
