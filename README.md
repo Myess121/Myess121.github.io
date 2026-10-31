@@ -25,7 +25,7 @@
 | `content/page/` | 关于我、归档、搜索、友情链接等独立页面 |
 | `archetypes/post.md` | `hugo new` 使用的新文章模板 |
 | `config/_default/` | 网站配置（标题、菜单、侧边栏、功能开关） |
-| `assets/img/` | 头像 `avatar.png`、网站图标 `favicon.png` |
+| `assets/img/` | 头像 `avatar.jpg`、网站图标 `favicon.png` |
 | `assets/scss/custom.scss` | 自定义样式（一般不用改） |
 | `layouts/` | 对主题个别模板的覆盖（目前只有去掉 Google Fonts） |
 | `docs/文章模板.md` | 可复制的文章模板和字段说明 |
@@ -99,14 +99,11 @@ git push
 
 ## 六、待填写的个人信息
 
-以下内容目前是占位符，在 VS Code 里全局搜索 `【待填写】` 就能找到：
+以下内容目前是占位符，在 VS Code 里全局搜索 `【待填写】` 就能找到（简介和头像已设置：简介在 `params.toml` 的 `sidebar.subtitle`，同时用作网站描述；头像是 `assets/img/avatar.jpg`，换头像时替换这个文件，建议正方形）：
 
 | 内容 | 位置 |
 | --- | --- |
 | 博客标题（也作为侧边栏昵称） | `config/_default/config.toml` 的 `title` |
-| 一句话简介 | `config/_default/params.toml` 的 `sidebar.subtitle` |
-| 网站描述（搜索引擎用） | `config/_default/params.toml` 的 `description` |
-| 头像 | 替换 `assets/img/avatar.png`（建议正方形） |
 | 关于我 | `content/page/about/index.md` |
 
 ## 七、常见问题

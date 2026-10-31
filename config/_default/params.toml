@@ -1,7 +1,6 @@
 # Pages placed under these sections will be shown on homepage and archive page.
 mainSections = ["post"]
-# 网站描述，用于搜索引擎和分享卡片（SEO）
-description = "【待填写】网站描述：课程笔记、科研学习记录、编程技术与大学生活"
+# 网站描述（SEO）：不单独设置时，主题自动使用侧边栏简介 sidebar.subtitle
 # Output page's full content in RSS.
 rssFullContent = true
 favicon        = "img/favicon.png"
@@ -21,8 +20,8 @@ SortBy              = "default"
 
 [sidebar]
     emoji    = "🍥"
-    subtitle = "【待填写】一句话介绍自己"
-    avatar   = "img/avatar.png"
+    subtitle = "Moonlight, Dream, Yonder.「月光，梦境，皆向远方。」"
+    avatar   = "img/avatar.jpg"
 
 [article]
     headingAnchor = false
