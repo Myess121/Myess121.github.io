@@ -15,7 +15,7 @@
 | 文件 | 内容 |
 | --- | --- |
 | `config.toml` | baseurl、语言（`zh`，对应主题 `i18n/zh.toml`，不要改成 `zh-cn`）、`hasCJKLanguage`、分页 |
-| `params.toml` | 侧边栏、站点描述、日期格式（`2006-01-02`）、全站 KaTeX、评论关闭、小工具、配色切换 |
+| `params.toml` | 侧边栏、站点描述、日期格式（`2006-01-02`）、KaTeX 默认关闭（按文章开启）、评论关闭、小工具、配色切换 |
 | `menu.toml` | 社交链接（GitHub） |
 | `markup.toml` | Goldmark passthrough（保护 LaTeX）、目录层级、代码高亮 |
 | `permalinks.toml` | 文章网址 `/p/:slug/` |
