@@ -5,7 +5,7 @@ slug: blog-setup
 date: 2026-10-31
 image: cover.jpg
 categories:
-    - 学习
+    - 学学习
 tags:
     - Hugo
     - 示例

@@ -5,9 +5,9 @@ slug: "{{ .File.ContentBaseName }}"
 date: {{ .Date }}
 # 封面图：把图片放进本文件夹，再写文件名，例如 cover.jpg；不需要就留空
 image:
-# 分类二选一：学习、碎碎念
+# 分类二选一：学学习、碎碎念
 categories:
-    - 学习
+    - 学学习
 tags:
     -
 # true 表示草稿：本地 hugo server -D 能看到，正式网站不会发布
