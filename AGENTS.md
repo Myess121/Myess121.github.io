@@ -28,7 +28,7 @@
 ```
 content/
 ├── _index.md               首页（菜单项“首页”）
-├── categories/<分类名>/     5 个固定分类：学习笔记、科研记录、编程技术、大学生活、其他
+├── categories/<分类名>/     2 个分类：学习、碎碎念
 ├── tags/_index.md          标签列表页标题
 ├── page/                   独立页面：about、archives、search、links
 └── post/<slug>/index.md    文章（page bundle，图片放同一文件夹）
