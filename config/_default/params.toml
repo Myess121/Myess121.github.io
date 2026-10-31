@@ -1,5 +1,7 @@
 # Pages placed under these sections will be shown on homepage and archive page.
 mainSections = ["post"]
+# 网站描述，用于搜索引擎和分享卡片（SEO）
+description = "【待填写】网站描述：课程笔记、科研学习记录、编程技术与大学生活"
 # Output page's full content in RSS.
 rssFullContent = true
 favicon        = "img/favicon.png"

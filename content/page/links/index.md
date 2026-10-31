@@ -1,5 +1,6 @@
 ---
 title: 友情链接
+slug: links
 links:
   - title: Hugo 官方文档
     description: 本博客使用的静态网站生成器
