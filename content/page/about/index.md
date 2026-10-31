@@ -1,6 +1,6 @@
 ---
 title: 关于我
-description: 【待填写】关于我页面
+description: Myess，北京理工大学信息与电子学院 2025 级学生
 slug: about
 menu:
     main:
@@ -10,11 +10,11 @@ menu:
 comments: false
 ---
 
-> 以下内容均为占位符，请替换成你自己的介绍。
-
 ## 我是谁
 
-【待填写】昵称 / 一句话介绍。
+Myess，北京理工大学信息与电子学院 2025 级学生。
+
+> Moonlight, Dream, Yonder.「月光，梦境，皆向远方。」
 
 ## 这个博客写什么
 
@@ -26,4 +26,4 @@ comments: false
 ## 联系方式
 
 - GitHub：[Myess121](https://github.com/Myess121)
-- 邮箱：【待填写，可选】
+- 邮箱：[mengdeyuan0537@163.com](mailto:mengdeyuan0537@163.com)

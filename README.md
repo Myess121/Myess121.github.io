@@ -97,13 +97,13 @@ git push
 - 图片放在文章文件夹里，用 `![说明](文件名.jpg)` 引用；front matter 里写 `image: 文件名.jpg` 设为封面。
 - 示例文章《我的博客搭建记录》在 `content/post/blog-setup/`，可以参考格式，不需要时删掉整个文件夹。
 
-## 六、待填写的个人信息
-
-以下内容目前是占位符，在 VS Code 里全局搜索 `【待填写】` 就能找到（简介和头像已设置：简介在 `params.toml` 的 `sidebar.subtitle`，同时用作网站描述；头像是 `assets/img/avatar.jpg`，换头像时替换这个文件，建议正方形）：
+## 六、个人信息在哪里改
 
 | 内容 | 位置 |
 | --- | --- |
-| 博客标题（也作为侧边栏昵称） | `config/_default/config.toml` 的 `title` |
+| 博客标题（也是侧边栏昵称） | `config/_default/config.toml` 和 `_languages.toml` 的 `title` |
+| 简介（也用作网站描述） | `config/_default/params.toml` 的 `sidebar.subtitle` |
+| 头像 | 替换 `assets/img/avatar.jpg`（建议正方形） |
 | 关于我 | `content/page/about/index.md` |
 
 ## 七、常见问题
