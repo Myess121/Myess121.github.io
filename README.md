@@ -1,47 +1,83 @@
-<img align="right" width="150" alt="logo" src="https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png">
+# Myess121 的个人博客
 
-# Hugo Theme Stack Starter Template
+网站地址：<https://Myess121.github.io/>
 
-This is a quick start template for [Hugo theme Stack](https://github.com/CaiJimmy/hugo-theme-stack). It uses [Hugo modules](https://gohugo.io/hugo-modules/) feature to load the theme.
+基于 [Hugo](https://gohugo.io/) + [Hugo Theme Stack v4](https://github.com/CaiJimmy/hugo-theme-stack)，从官方模板 [hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) 创建。全部使用免费服务：GitHub 托管代码，GitHub Actions 自动构建，GitHub Pages 发布网站。
 
-It comes with a basic theme structure and configuration. GitHub action has been set up to deploy the theme to a public GitHub page automatically. Also, there's a cron job to update the theme automatically everyday.
+## 网站是怎么运行的
 
-## Video Tutorial
-
-In case you got lost during the setup process, here's a video tutorial that setups a new Hugo site using this template, and deploys it to GitHub Pages: https://www.youtube.com/watch?v=8qDdQQ6Ifxo
-
-## Get started
-
-1. Click *Use this template*, and create your repository as `<username>.github.io` on GitHub. (You can also use a different repository name, but then the resulting website will be available at `https://<username>.github.io/<repository-name>`. )
-![Step 1](https://user-images.githubusercontent.com/5889006/156916624-20b2a784-f3a9-4718-aa5f-ce2a436b241f.png)
-
-2. Once the repository is created, create a GitHub codespace associated with it.
-![Create codespace](https://user-images.githubusercontent.com/5889006/156916672-43b7b6e9-4ffb-4704-b4ba-d5ca40ffcae7.png)
-
-3. While waiting for the codespace to be created, go to `Settings` -> `Pages` of your newly created repository, and set `Build and deployment` -> `Source` to `GitHub Actions`.
-![Change build and deployment source](https://github.com/user-attachments/assets/192459bf-25d8-441e-8029-c108d789e449)
-
-4. After the codespace is created, you can test that the site is built successfully by running `hugo server` in the terminal and see your new site in action. 
-
-5. Check `config` folder for the configuration files. You can edit them to suit your needs. Make sure to update the `baseurl` property in `config/_default/config.toml` to your site's URL. For example, if your new repository is named `my-blog`, then the `baseurl` should be `https://<username>.github.io/my-blog/`.
-
-6. Once you're done editing the site, just commit it and push it. GitHub action will deploy the site automatically to GitHub page asociated with the repository.
-
----
-
-In case you don't want to use GitHub codespace, you can also run this template in your local machine. **You need to install Git, Go and Hugo extended locally.** For more information, check official Hugo documentation: https://gohugo.io/installation/
-
-## Update theme manually
-
-Run:
-
-```bash
-hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v4
-hugo mod tidy
+```
+本地写 Markdown ──git push──▶ GitHub 仓库 ──触发──▶ GitHub Actions 运行 hugo
+                                                        │
+                                   浏览器访问 ◀── GitHub Pages ◀── 生成的 HTML
 ```
 
-> This starter template has been configured with `v4` version of theme. Due to the limitation of Go module, once the `v4` or up version of theme is released, you need to update the theme manually. (Modifying `config/module.toml` file)
+- **Hugo**：把 `content/` 里的 Markdown 和主题模板合在一起，生成纯 HTML 网页（输出到 `public/`，这个文件夹不提交）。
+- **主题**：通过 Hugo Modules 引用（见 `go.mod` 和 `config/_default/module.toml`），所以仓库里看不到主题源码，构建时自动下载。这也是本机需要装 Go 的原因。
+- **部署**：`.github/workflows/deploy.yml` 在每次推送到 `master` 分支后自动运行。
 
-## Deploy to another static page hostings
+## 目录说明
 
-Check official Hugo documentation: https://gohugo.io/host-and-deploy/
+| 路径 | 作用 |
+| --- | --- |
+| `content/post/` | 博客文章，每篇一个文件夹（文章 `index.md` + 图片） |
+| `content/categories/` | 5 个分类：学习笔记、科研记录、编程技术、大学生活、其他 |
+| `content/page/` | 归档、搜索、友情链接等独立页面 |
+| `archetypes/post.md` | 新文章模板 |
+| `config/_default/` | 网站配置（标题、菜单、侧边栏、功能开关） |
+| `assets/img/` | 头像 `avatar.png`、网站图标 `favicon.png` |
+| `assets/scss/custom.scss` | 自定义样式（一般不用改） |
+| `docs/更新日志.md` | 每次修改的记录，方便接手 |
+
+## 日常使用（Windows PowerShell）
+
+在本文件夹打开 PowerShell。
+
+**新建文章**（文件夹名就是网址的一部分，建议用英文和短横线）：
+
+```powershell
+hugo new content post/my-first-note/index.md
+```
+
+然后编辑 `content/post/my-first-note/index.md`。模板默认 `draft: true`（草稿），写完改成 `false` 才会发布。
+
+**本地预览**（`-D` 表示连草稿一起显示）：
+
+```powershell
+hugo server -D
+```
+
+浏览器打开 <http://localhost:1313/>，保存文件后页面会自动刷新。按 `Ctrl+C` 停止。
+
+**发布**：
+
+```powershell
+git add .
+git commit -m "新文章：xxx"
+git push
+```
+
+推送后 1～2 分钟，到 GitHub 仓库的 Actions 页面能看到构建进度，绿色对勾表示发布成功。
+
+## 写作要点
+
+- 分类只用这 5 个：`学习笔记`、`科研记录`、`编程技术`、`大学生活`、`其他`。标签（tags）可以随便写。
+- 数学公式已全站开启（KaTeX）：行内 `$...$`，块级 `$$...$$`。
+- 图片放在文章文件夹里，用 `![说明](文件名.jpg)` 引用；`image: 文件名.jpg` 设为封面。
+- 示例文章《我的博客搭建记录》在 `content/post/blog-setup/`，可以参考格式，不需要时删掉整个文件夹。
+
+## 待填写的个人信息
+
+以下内容目前是占位符，搜索 `【待填写】` 能找到：
+
+- 博客标题：`config/_default/config.toml` 和 `config/_default/_languages.toml` 里的 `title`
+- 一句话简介：`config/_default/params.toml` 里的 `subtitle`
+- 头像：替换 `assets/img/avatar.png`（目前是模板自带图片）
+
+## 主题更新
+
+主题版本记录在 `go.mod`。需要更新时，到 GitHub 仓库 Actions 页面手动运行 “Update theme”（已关闭每日自动更新），然后在本地 `git pull` 同步。也可以在本地运行 `hugo mod get -u` 再 `hugo mod tidy`。
+
+## 一次性设置
+
+GitHub 仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**，否则推送后网站不会更新。
