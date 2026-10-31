@@ -25,7 +25,7 @@
 | `content/page/` | 关于我、归档、搜索、友情链接等独立页面 |
 | `archetypes/post.md` | `hugo new` 使用的新文章模板 |
 | `config/_default/` | 网站配置（标题、菜单、侧边栏、功能开关） |
-| `assets/img/` | 头像 `avatar.jpg`、网站图标 `favicon.png` |
+| `assets/img/` | 头像 `avatar.jpg`、网站图标 `favicon-avatar.png` |
 | `assets/scss/custom.scss` | 自定义样式（一般不用改） |
 | `layouts/` | 对主题个别模板的覆盖（目前只有去掉 Google Fonts） |
 | `docs/文章模板.md` | 可复制的文章模板和字段说明 |

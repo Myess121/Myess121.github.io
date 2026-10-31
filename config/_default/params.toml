@@ -3,7 +3,7 @@ mainSections = ["post"]
 # 网站描述（SEO）：不单独设置时，主题自动使用侧边栏简介 sidebar.subtitle
 # Output page's full content in RSS.
 rssFullContent = true
-favicon        = "img/favicon.png"
+favicon        = "img/favicon-avatar.png"  # 换图标时改文件名，避免浏览器缓存旧图标
 
 # Accepted values: "default", "lastmod"
 # default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
