@@ -6,6 +6,17 @@
 
 基于 [Hugo](https://gohugo.io/) + [Hugo Theme Stack v4](https://github.com/CaiJimmy/hugo-theme-stack)，从官方模板 [hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) 创建。全部使用免费服务：GitHub 托管代码，GitHub Actions 自动构建，GitHub Pages 发布网站。没有服务器、没有数据库。
 
+## 双击使用小工具
+
+日常操作可以直接双击根目录的 **`博客小工具.exe`**，不用输入命令，也不用安装额外软件。
+
+- **新建文章**：填写中文标题，选择分类，点击“创建草稿并打开编辑”。网址名可留空自动生成；有公式时勾选对应选项。优先用 VS Code 打开，没有时用记事本。
+- **本地预览**：点击开关，启动后自动打开浏览器，包含草稿。关掉开关或关闭小工具会停止本窗口启动的预览。
+- **文章文件夹、线上网站**：点击对应按钮即可打开。
+- **发布到网站**：先检查构建，再列出待提交的全部改动。确认后保存版本并推送，随后打开 Actions 查看部署进度。新文章默认 `draft: true`，正式发布前在文章开头改成 `draft: false`。
+
+`博客小工具.exe` 和 `blog-tool.ps1` 要放在同一个文件夹；启动器源码是 `blog-tool-launcher.cs`。原来的命令和 `本地预览.bat` 仍可使用。若已有预览占用 1313 端口，先关闭原来的预览。
+
 ## 一、网站是怎么运行的
 
 ```
